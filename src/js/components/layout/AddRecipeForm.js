@@ -29,7 +29,7 @@ export default class Footer extends React.Component {
             <input type="text" class="form-control" id="formRecipeIngredients" placeholder="List your ingredients here" />
           </fieldset>
         </form>
-        <a class="btn-default" onClick={this.saveRecipe.bind(this)}>Save recipe</a>
+        <a class="btn" onClick={this.saveRecipe.bind(this)}>Save recipe</a>
       </div>
     );
   }

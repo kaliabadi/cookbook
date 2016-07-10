@@ -7,7 +7,7 @@ import Featured from "./pages/Featured";
 import Layout from "./pages/Layout";
 import Settings from "./pages/Settings";
 
-const app = document.getElementById('app');
+const app = document.getElementById("app");
 
 ReactDOM.render(
   <Router history={hashHistory}>

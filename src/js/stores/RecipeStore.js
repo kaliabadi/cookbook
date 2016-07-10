@@ -5,16 +5,19 @@ import dispatcher from "../dispatcher";
 class RecipeStore extends EventEmitter {
   constructor() {
     super()
+    this.featuredRecipes = [];
     this.recipes = [
       {
         id: 11311231,
         title: "recipe1",
-        ingredients: "some ingredients"
+        ingredients: "some ingredients",
+        featured: true
       },
       {
         id: 11311232,
         title: "recipe2",
-        ingredients: "some ingredients2"
+        ingredients: "some ingredients2",
+        featured: true
       },
     ];
   }
@@ -33,6 +36,20 @@ class RecipeStore extends EventEmitter {
 
   getAll() {
     return this.recipes;
+  }
+
+  getFeaturedRecipes() {
+    for(var recipe in this.recipes) {
+      let featuredRecipeItem = this.recipes[recipe];
+      if (featuredRecipeItem.featured === true) {
+        this.featuredRecipes.push(featuredRecipeItem);
+      }
+    }
+    return this.featuredRecipes;
+  }
+
+  searchIngredient(query) {
+    
   }
 
   handleActions(action) {

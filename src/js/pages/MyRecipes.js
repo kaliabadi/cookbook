@@ -2,8 +2,9 @@ import React from "react";
 
 import Recipe from "../components/Recipe";
 import AddRecipe from "../components/layout/AddRecipe";
-import * as RecipeActions from "../actions/RecipeActions"
+import * as RecipeActions from "../actions/RecipeActions";
 import RecipeStore from "../stores/RecipeStore";
+import * as GetRequest from "../actions/GetRequest";
 
 export default class MyRecipes extends React.Component {
   constructor() {
@@ -32,6 +33,10 @@ export default class MyRecipes extends React.Component {
     RecipeActions.reloadRecipes();
   }
 
+  getRequest() {
+    GetRequest.httpRequest("chocolate");
+  }
+
   render() {
     const { recipes } = this.state;
 
@@ -42,9 +47,10 @@ export default class MyRecipes extends React.Component {
     return (
       <div>
         <h1>MyRecipes</h1>
-        <button onClick={this.reloadRecipes.bind(this)}>Reload!</button>
+        <button class="btn" onClick={this.reloadRecipes.bind(this)}>Reload!</button>
+        <button class="btn" onClick={this.getRequest.bind(this)}>Request Chocolate!</button>
         <AddRecipe />
-        <ul>{RecipeComponents}</ul>
+        <div class="row">{RecipeComponents}</div>
       </div>
     );
   }

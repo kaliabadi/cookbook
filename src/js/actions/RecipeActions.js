@@ -22,12 +22,14 @@ export function reloadRecipes() {
       {
         id: 8484848484,
         title: "recipe 1 reload",
-        ingredients: "something1 reload"
+        ingredients: "something1 reload",
+        featured: false
       },
       {
         id: 6262627272,
         title: "recipe 2 reload",
-        ingredients: "something2 reload"
+        ingredients: "something2 reload",
+        featured: false
       },
     ]});
   }, 1000);
