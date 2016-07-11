@@ -1,7 +1,7 @@
 import React from "react";
 
 import Recipe from "../components/Recipe";
-import RecipeStore from "../stores/RecipeStore";
+import RecipeStore from "../../model/stores/RecipeStore";
 
 export default class Featured extends React.Component {
   constructor() {

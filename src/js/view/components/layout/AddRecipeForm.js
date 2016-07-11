@@ -1,7 +1,7 @@
 import React from "react";
 
-import * as RecipeActions from "../../actions/RecipeActions"
-import RecipeStore from "../../stores/RecipeStore";
+import * as RecipeActions from "../../../model/actions/RecipeActions"
+import RecipeStore from "../../../model/stores/RecipeStore";
 
 export default class Footer extends React.Component {
   saveRecipe() {

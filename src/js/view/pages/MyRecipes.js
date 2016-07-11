@@ -2,9 +2,9 @@ import React from "react";
 
 import Recipe from "../components/Recipe";
 import AddRecipe from "../components/layout/AddRecipe";
-import * as RecipeActions from "../actions/RecipeActions";
-import RecipeStore from "../stores/RecipeStore";
-import * as GetRequest from "../actions/GetRequest";
+import * as RecipeActions from "../../model/actions/RecipeActions";
+import RecipeStore from "../../model/stores/RecipeStore";
+import * as GetRequest from "../../model/actions/GetRequest";
 
 export default class MyRecipes extends React.Component {
   constructor() {

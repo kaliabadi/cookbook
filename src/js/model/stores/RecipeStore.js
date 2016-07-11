@@ -1,6 +1,6 @@
 import { EventEmitter } from "events";
 
-import dispatcher from "../dispatcher";
+import dispatcher from "../../dispatcher";
 
 class RecipeStore extends EventEmitter {
   constructor() {
@@ -47,10 +47,7 @@ class RecipeStore extends EventEmitter {
     }
     return this.featuredRecipes;
   }
-
-  searchIngredient(query) {
-    
-  }
+  
 
   handleActions(action) {
     switch(action.type) {
